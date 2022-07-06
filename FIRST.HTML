@@ -1,0 +1,892 @@
+<html>
+    <head><title>javascript</title>
+    <style>
+        .primary{
+            background-color: aqua;
+            text-align: center;
+            border: 2px solid red;
+            padding: 5px ;
+            margin-top: 15px;
+        }
+        .bigyat{
+            background-color: brown;
+            text-align: center;
+            border: 2px solid black;
+           
+        }
+        .btn-hello{
+            background-color: aqua;
+            color: black;
+            border: 2px solid red;
+        }
+        .container{
+/*
+            background:green;
+            color: white;
+*/
+            font-size: 16px;
+        }
+        </style>
+
+    </head>
+    <body>
+       <span>
+           
+       </span>
+        
+ <div class="container">
+          
+           Say my name !!!!
+           
+        </div>
+         <button id="click"   type="submit">submit</button>
+         
+        <div id="m" class="container2">
+            <p>hello brother </p>
+             <p id="second">hello brother </p>
+             <p class="hero">hello brother </p>
+             <p>hello brother </p>
+             <p>hello brother </p>
+             <p>hello brother </p>
+            
+        </div>
+       <form action="hero">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit"><br>
+  <textarea class="text">this is meh</textarea>
+  
+</form> 
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    </body>
+    <script>
+// 1---------------------------------------------.ways to print in javascript//
+//console.log("hello world", 4+6,"ANOTHER WORL");
+//alert("its me ");
+//document.write("this is error");
+
+//// -------------------------2.JAVASCRIPT CONSOLE APIApplication Programming Interface)//
+//console.warn("hello world"); 
+//console.error("hello world"); 
+//console.log("hello world");         
+
+// 3.--------------------------------------- java script variable      
+//container to store data    
+// var x=30;
+//var y=40;
+//console.log(x+y);        
+
+//4. Data types in javascript
+//   --------------------------------------number
+//    var n1=20;
+//    var n2 =40.65;        
+//    ----------------------------------String
+//    var x="bigyat ";
+//    var y='bigyat';    
+        
+//        ---------------------------------------Object
+//    let marks ={
+//        rav1 :34,
+//            shubam:40,
+//    }    
+//		maks.ravi ='john';
+//		marks['ravi']= "john";
+//    console.log(marks);
+        
+//  ---------------------------------------------      bolleans 
+//     var a=true;
+//     var b= false ;
+//     console.log(a,b);
+        
+//  ----------------------  -  -  undefined created variable but not a thing in there 
+//    var und ;
+//        console.log(und);
+        
+//  -- -  - - ------------------------------ null created nothing is there 
+//   var n= null;
+//    console.log(n);    
+        
+//---------------------------------note------------------------------------------     
+//5. at a very high level there are two types of datatypes there are 
+//1primitive data types :string , number ,symbol,undefined ,null ,bollean
+//2 reference data types : object and array
+        
+//-------------------Array   -----------------------
+//var z =[1,2,3,4,5,6]        
+//        
+//console.log(z[2]);
+        
+// ------------------------------------------------operator
+ 
+//  var x=20;
+//    var y=30;
+//    var z= x+y;    
+//console.log("the value is ",z);        
+//        
+//var x=20;
+//    var y=30;
+//    var z= x/y;    
+//console.log("the value is ",z);     
+//        
+//var x=20;
+//    var y=30;
+//    var z= x*y;    
+//console.log("the value is ",z);     
+//
+//var x=20;
+//    var y=30;
+//    var z= x-y;    
+//console.log("the value is ",z);             
+        
+// -----------------------ASSIGMENT OPERATOR
+ 
+//  var x =20;
+//    var c=x;
+//    c+= 20;
+//     c-= 20; 
+//         c*= 20;
+//         c/= 20;
+        
+// ------------------------------comparison operator
+//  var x =20;
+//var y=30;
+//console.log(x==y);        
+//        
+//  var x =30;
+//var y=30;
+// console.log(x<=y);        
+// 
+//         var x =20;
+//var y=30;
+// console.log(x>=y); 
+//        
+//var y=10;
+//console.log(x>y);        
+//        
+        
+// logical operator
+ 
+////-------------------------------------logical and && (*)
+// console.log(true && true);       
+//  console.log(false && true);       
+//        console.log(true && false);       
+//        console.log(false && false);       
+//      
+//        
+////---------------------------------------------- logical or || (+)       
+// console.log(true ||   true);       
+//  console.log(false ||   true);       
+//        console.log(true ||  false);       
+//        console.log(false ||  false);     
+// 
+//// logical not !
+//console.log(!true);            
+// console.log(!false);         
+        
+// ----------------------------------------------------function//
+//        function whole(name, food="momo"){
+//            console.log(`this is me ${name} and my best food is ${food}`);
+//            return 0;
+//        
+//        }
+//        let name = "rohan";
+//        let food = "momo";
+//        let name2 ="bigyat";
+//        let food2 ="pizza";
+//        
+//        let num = whole(name2);//only one argument is passed 
+//        console.log(num);
+        
+     /////return function ////////    
+        
+//        function whole(name , price){
+//            let msg =`this is me ${name} and my needs are ${price}`;
+//                return msg;
+//        }
+//        let name1= 'bigyat';
+//        let price = 13;
+//        
+//     let min = whole(name1,price);
+//        console.log(min);
+        
+/////////////using var as function////////////
+        
+//      let whole =  function(name , price){
+//            let msg =`this is me ${name} and my needs are ${price}`;
+//                return msg;
+//        }
+//        let name1= 'bigyat';
+//        let price = 13;
+//        
+//     let min = whole(name1,price);
+//        console.log(min);
+//function avg(a,b){
+//    c = (a*b)/2;
+//    return c;
+//    
+//}   
+// c1 = avg(4,6);
+//c2 = avg(16,4);
+//
+//console.log(c1,c2)   
+        
+// /// object function/////////////
+//    let total ={
+//        name: "bigyat",
+//        class: "nine",
+//        game: function(){
+//            return "CoD";
+//        }
+//        
+//        
+//    }
+//     console.log(total.game()) 
+        
+////////////foreach in a function///////////
+//        array = ["bigyat","binita","anisha"];
+//        
+//        array.forEach(
+//        function output(index,array,item){
+//            console.log(index,item);
+//        });
+
+/////////// Scope of function/////////////
+//        
+//        let i =230; //block let and const has block level scope 
+//        console.log(i);
+//        function ui(name){
+//             i =30;// didnot declar local so it change the value
+//            console.log(i); /// var has function level scope //local
+//            
+//            return`this is ${name}.`
+//        }
+//        
+//        console.log(ui("biz"),i);
+        
+// ---------------------------------------------if statement
+//  var age =50; 
+//    if(age <18)   
+//        {
+//            console.log("you are fucaahae");
+//        }
+//        
+// if else statement 
+//        if (age <18)
+//            {
+//                console.log("you are fucahae");
+//                
+//            }
+//        
+//        else{
+//            console.log("you are mature ");
+//        }
+   
+     
+  //-------------------------------------if-else ladder       
+//  var age =70;
+//        
+//if(age <10){
+//    console.log("you are kid ")
+//}        
+//else if(age <25){
+//    conosle.log("you are teen");
+//}        
+//else if(age<40){
+//    console.log("you are a man ");
+//    
+//} 
+//else{
+//    console.log("yo are old ")
+//}        
+
+//-------------------------------------------  for loop   
+//var x=[0,1,3,4,5,6,7];
+//for(i=0;i<x.length;i++){
+//    console.log(x[i])
+//}
+//        
+//x.forEach(function(element) {
+//            console.log(element);
+//            })
+        
+// let x= 0; //limited only for end of curly braces //
+//const a=0; // value is not changed  like variable  ///       
+     
+//----------------------------------WHILE STATEMENT//
+//    var  x=[1,2,3,4,5,6,7]   
+//    let y =0;
+////    while(y< x.length)
+////        {
+////            console.log(x[y]);
+////            y++
+////        }
+     
+//----------------------------DO WHILE LOOP    
+//   do{
+//       console.log(x[y]);
+//       y++
+//   }   while (y<x.length);  
+//        
+ 
+//---------------Break(breaks the loop and comes out)----------------------------------------        
+//  var x=[0,1,6,4,5,6,7];             
+                                
+//   for(i=0; i<x.length ;i++)
+//       {
+//           if(i==6)
+//               {
+//                   break;
+//               }
+//           console.log(x[i]);
+//       }
+// //--------------------------------continue(excep the part only)--------------------       
+//       for(i=0; i<x.length ;i++)
+//       {
+//           if(i==6)
+//               {
+//                   continue;
+//               }
+//           console.log(x[i]);
+//       }  
+//        
+//  --------------------------------------------- Array Methods
+        
+//    let myarray=["ajaya",34,"bishwa",56,"ram"];
+//        console.log(myarray);
+//        console.log(myarray.length); array length 
+//        myarray.pop();
+//         console.log(myarray);
+//        console.log(myarray.length);
+//        myarray.push("bigyat");
+//        console.log(myarray);
+//         myarray.shift();//delete the first index of element
+//        console.log(myarray);
+//        myarray.unshift("hero");//insert the first index of element
+//        console.log(myarray);
+//        console.log( myarray.unshift("hero"))//same as of the before one//
+//       console.log( myarray.sort())// sort the element//
+        
+    //--------------------------------------------String method in array
+        
+//    let string ="bigyat is a good boy";
+//        console.log(string);
+//        
+//    console.log(string.indexOf("boy"));    
+//     console.log(string.lastIndexOf("boy"));    
+ //      console.log(string.slice(1,5));  one is included five is excluded 
+//       console.log(string.replace("boy","bigyat"));   
+        
+ //------------------------------------------Dates in javascript---->      
+//        
+//    let mydate = new Date();
+//        console.log(mydate);
+//         console.log(mydate.getDate());
+//        
+//        console.log(mydate.getFullYear());
+//       
+//        console.log(mydate.getHours());
+//       
+//        console.log(mydate.getMilliseconds());
+//         console.log(mydate.getDay());
+//        console.log(mydate.getSeconds());
+       
+//--------------------------------------- DOM MANUPULATION-----------------   
+//        
+//         let my = document.getElementsByClassName("container");
+//        console.log(my);
+//        let n = document.getElementsByTagName("button");
+//        console.log(n);
+//        my[0].style.background ="green";
+//        my[0].style.background= "red";
+//        my[1].style.background= "blue";
+//        
+ /////////////////////////////// add and remove new and old class////////////////////////////
+        
+//        my[0].classList.add("btn-hello"); //
+//        my[0].classList.remove("btn-hello");
+//        let hero = document.getElementById("m");
+////          my[0].classlist.add("hello");
+//            my[1].classList.add("hello");
+/////////////////////////////////////check the innner text and tag////////////
+        
+//        console.log(hero.innerHTML); //for id 
+//        console.log(hero.innerText); 
+//        console.log(my[0].innerHTML);// for class
+//        console.log(my[1].innerText);
+        
+ /////////////////////////////////////////////////////////////////////////////////////////////////       
+//        let ele =document.getElementById("click");
+//        console.log(ele);
+//        
+//        let whole =document.getElementsByClassName("container");
+//        console.log(whole);
+//        
+//       // whole[0].style.background="yellow"; //0 defines the first container//
+//        whole[1].classList.add("primary"); //add the next class name of an element
+//        whole[0].classList.add("bigyat");
+////        whole[0].classList.remove("bigyat"); //remove the class name 
+//       console.log(whole[0].innerHTML);
+//        console.log(whole[1].innerText);
+////        ele.style.padding="16px";
+        
+
+// -------------------------------------------add a child inside a div--------
+//   let tn = document.getElementsByTagName('div');
+//        console.log(tn);
+//        newchild = document.createElement("p");
+//        newchild.innerText ="this me homie";
+//        tn[0].appendChild(newchild);
+        
+//        let roar = document.getElementsByTagName('div');
+//        console.log(roar);
+//        newchild =document.createElement("b");
+//        newchild.innerText = "this is me my boy";
+//        roar[0].appendChild(newchild);
+//        
+//        let superman = document.getElementsByTagName("span");
+//        console.log(superman);
+//        baby = document.createElement("div");
+//        baby.innerText = "this is new boy";
+//        superman[0].appendChild(baby);
+//        baby2 =document.createElement("p");
+//        baby2.innerText=" hi i am new one ";
+//        superman[0].replaceChild(baby2,baby);
+//        
+        
+/////----------------------------------replace a child with another one-----        
+//      newchild2 =document.createElement("pre");
+//    newchild2.innerHTML ="heelo how are youuuu";
+//        tn[0].replaceChild(newchild2, newchild);
+        //replace the current child p to next child pre.//replaceChlid 
+        //next modal are
+//        document.links;
+//        document.location;
+//        documen.title;
+//        documets.scripts;
+//        document.domain;
+//        document.images;
+        
+//        let wn = document.getElementsByTagName("div");
+//        newclass = document.createElement("p");
+//        newclass.innerText = "this is me baby";
+//        wn[0].appendChild(newclass);
+//        
+//----------------------------------queryselector-----------------------------
+        
+//let n =document.querySelector(".container")//select the first container  
+//        console.log(n);
+//        
+// let ram =document.querySelectorAll("container");       /// select entire one//
+//        console.log(ram);
+        
+
+// -------------------------------------Events In Js---------------------------------
+          
+////        function now(){
+////            console.log("you have clicked  ")
+////        }
+//        
+////        window.onload = function(){   //The onload event occurs when an object has been loaded.
+////            console.log("document loaded ")
+////        }
+//        
+///////////////////////////////////////////addEventListener()/////////////////////////////////////////
+//        
+////        let whole= document.getElementsByClassName("container");
+////       m.addEventListener('mouseover', function(){
+////            whole[0].style.backgroundColor ="green";
+////        })
+//        let my= document.getElementsByClassName("container");
+//        my[0].addEventListener('mouseover',function(){
+//            m.innerHTML ="hello this is me"
+//            console.log("mouse is clicked");
+//        })
+         
+//        m.addEventListener('mouseover', function(){
+//            document.querySelectorAll('.container')[0].innerHTML = "hello i am new"
+//            console.log("mouse is there");
+//        })
+//        
+//        let play = document.getElementsByClassName("container");
+//        play[0].addEventListener('mouseout',function(){
+//            console.log("i am an 1st class");
+//        })
+//         mouseup(released) and mousedown(click) are also used 
+//        let previous = document.querySelectorAll('.container')[0].innerHTML
+//        
+//         m.addEventListener('mouseup' ,function(){
+//            document.querySelectorAll('.container')[0].innerHTML = previous;
+//        })
+//        
+////        
+//        m.addEventListener('mousedown' ,function(){
+//            document.querySelectorAll('.container')[0].innerHTML= "hello <b>i am here</b>"
+//        })
+        
+        
+//        let pre = document.querySelectorAll('.container')[0].innerHTML;
+//        
+//        m.addEventListener('mouseup',function(){
+//            document.querySelectorAll('.container')[0].innerHTML =pre;
+//            console.log("mouse up when you release the mouse ")
+//            
+//        })
+//        
+//        
+//        m.addEventListener('mousedown', function(){
+//            document.querySelectorAll('.container')              
+//        [0].innerHTML ="hello i am hero";
+//            console.log("this is when mouse is clicked ")
+//           
+//        
+//        })
+//        let previous =document.querySelectorAll('.container')[0];
+//        
+//        m.addEventListener(mouseup,function(){
+//            document.querySelectorAll('.container')[0].innerHTML="hella yah !!!!";
+//            console.log("this is click one ");
+//        })
+//        
+//        m.addEventListener(mousedown,function(){
+//            document.querySelectorAll('.container')[0].innerHTML= previous;
+//            conosole.log("now you are clicked ")
+//        })   
+        
+//------------------------setTimeout and setInterval-------------------------------------
+        
+////////////////////////ARROW FUNCTION /////////////////////////////////////////////////////
+         
+//   function sum(a,b){
+//            c = a+b;
+//        return c;
+//        }
+//        c1 = sum(56,32);
+//        c2= sum(32,35);
+//        console.log(c1,c2);
+        
+//     sum = (a,b)=>{
+//        return a+b;
+//         
+//    }
+//        let multi = (a,b) => a*b;
+//            console.log(multi(50,60));
+        
+        
+//        
+// setTimeout syntax is setTimeout (functionName,time to display it ) 
+
+//        hero = ()=>{
+//            document.querySelectorAll('.container')[0].innerHTML = "hello i am new"
+//            console.log("hello my name is bigyat")
+//            
+//        }
+//        setTimeout(hero, 1000);
+//        my = ()=>{
+//            document.querySelectorAll('.container')[1].innerHTML = "hello i am new"
+//            console.log("hello  i am new ");
+//            
+//        }
+//        setTimeout(my, 100);
+//     hero =     setInterval(my, 100); // stops a certain interval 
+//    setTimeout(my, 1000);
+        
+ // setinterval syntax is setInterval(functionName, repeates in  a given time)//     
+        
+//        bigyat = ()=>{
+//            console.log("hello there");
+//            
+//        }
+//        
+//    clr =    setInterval(bigyat, 10);
+//        
+ ////////////////////////////////  clearIterval //////////////////////////////////////////////
+        
+//     used to cancel setInterval setTimeout function 
+//        clearInterval(clr); used for setinterval
+ //       clearTimeout(clr); used for settimeout
+    
+//-------------------------------------Local Storage -----------------------------------------------
+        
+//The localStorage and sessionStorage properties allow to save key/value pairs in a web browser. 
+
+//        localStorage.clear();
+//        localStorage.setItem('name','bigyat');
+//        localStorage.setItem('age','50');
+//        localStorage.setItem('occupation','farmer')
+//        
+//      console.log(localStorage.getItem("occupation"));
+//        console.log(localStorage.key(0));//indexing 
+//            localStorage.clear();
+//            localStorage.removeItem('name');
+//        localStorage.setItem("name","bigyat");
+//        localStorage.setItem("phone","9861001999");
+//        localStorage.setItem("occupation", "student");
+//        console.log(localStorage.getItem("name"));
+//        console.log(localStorage.key(2));
+        
+ //----------------------------JASON-----------------------
+        
+//        JavaScript Object Notation  a standard text-based format for representing structured data based on JavaScript object syntax
+//        
+//        only allows double quotes  in json
+        //parse =data becomes a JavaScript object 
+//        obj = {name:"bigyat", length:1,a: {this: "that"}}
+//        jso = JSON.stringify(obj);
+//        console.log(typeof jso);
+//          console.log( jso);
+//        parsed = JSON.parse(`{"name":"bigyat","length":1,"a":{"this":"that"}}`);
+//        console.log(parsed);
+//        let b = {
+//            name: "harry",
+//            class: 3,
+//            rollno: 2,
+//            surname: "pokharel",
+//            
+//        }  convert from a object to string and string to object 
+//    console.log(b);
+//        let convert = JSON.stringify(b);
+//        console.log(convert);
+//       let c = JSON.parse(convert);
+//        console.log(c);
+///////////////////////Templates Literals or Bacticks ////////////
+
+//       let a = 50;
+//        console.log(`this is my ${a}`);// change string to variable 
+        
+///-------------------------JQuery------------------
+        
+//     console.log(jQuery);   // $if replace by jQuery but represents the same.
+    
+ //////////////////////// syntax//////////////////////////////////
+        
+ //$('selector').action()       
+//        
+//  $('p').click();// click on p 
+        
+//    $('p').mouseups(function(){ // mouse is clicked then print 
+//        console.log("you click the p tag");
+////        $('p').hide();//hide the p when release the mouse 
+//        $(this).hide();// hide the clicked element with the help of this 
+////        $('#name').hide();// hide the given class when clicked  
+////        $('.name').hide();// hide the given id when clicked 
+//    })    
+
+//  $(document).ready( function() //if document is ready run this code //
+//{
+//      $('p').mouseup(function(){ // mouse is clicked then print 
+//        console.log("you click the p tag");
+////        $('p').hide();//hide the p when release the mouse 
+//        $(this).hide();}  )     
+////        
+//   $(function(){
+//       //samee as above 
+//   })     
+        
+        
+        
+///////////////selector in JQuery//////////////// 
+//there are 3 types of selector in jquery they are==
+//    1) element selector
+//    2) class selector
+//    3) id selector     
+
+        
+// id selector ///////////////
+//        $('p').click(function(){
+//       console.log("you clicked on p ",this)//this refer the element 
+//        })
+//        $('#second').click();//id  is clicked 
+//       
+//        $('p.hero').click();// class is clicked  
+        
+//        $('p').click(function(){
+//            $(this).hide("slow");//slow mode 
+//           
+//        })
+        
+//        $('p').click(function(){
+//            $(this).show();
+//        })
+        
+//                $('p').mouseup(function(){
+//              console.log("you have clcked",this)
+//                });
+//        $('#second').click();
+        
+//  $('*').click//clicked on all element 
+//  $('.class,.container').click//select both class and container 
+//  $('p,h1,h2').click
+//  $('p:first').click
+//  $('p:last').click
+        
+// -----------------Events--------------------------      
+//Mouse events:  click	,dblclick, mouseenter,mouseleave 	
+//Keyboard events: keypress,keyup,	keydown		
+//form events submit,change,focus, blur	
+//Document events load,scroll,resize,unload          
+//   
+// $('p').dblclick(function(){
+//     console.log('you double cliked the p')
+// })       
+        
+// $('#second').hover(function(){
+//     console.log("you touched me bro",this)
+// })       
+        
+     ///
+//        $('p').hover(function(){
+//            console.log('hello this is me',this);
+//            $(this).hide("slow");
+//        })
+        
+///////////////////On Method //////////////////// 
+        
+//you can use multiple function in one function 
+//        $('p').on({
+//            
+//            mouseleave:function(){
+//            alert("you have clicked bro",this);
+//        },
+//            mouseenter:function(){
+//            alert("you have released your mouse",this);
+//        }
+//        
+//        })
+        
+//     $('p').on({
+//         
+//         mousedown:function(){
+//             console.log('you have clicked the mouse ',this);
+//         },
+//         
+//         mouseup:function(){
+//             console.log("you have released the mouse",this);
+//         },
+//         
+//         dblclick:function(){
+//             console.log("you have double clicke the mouse", this);
+//         }
+//         
+//         
+//         
+//     }) 
+
+        
+//       $('p').on({
+//           
+//           mousedown: function(){
+//               console.log("this is clicked ");
+//           },
+//           
+//           mousedown: function(){
+//               console.log("this is meh clicked");
+//           }
+//         }); 
+        
+ //---//------------------ syntax of all-------------------
+    
+//$(selector).fadeTo(speed,opacity,easing,callback)-------------
+  //      
+    
+// $(".container").hide(10000,function(){
+//     alert("we have hide your contain");
+// }) //first the contain is vanished and it will print your next statement //
+//   $(".container").show(10000,function(){
+//     alert("we have showed your contain");
+// })         //second it will show and display the above givren message 
+        
+//      
+//      $('#click').click(function(){
+//       $('.container').toggle(1000);
+//       //toogle -- hide and show 
+//   });    
+        
+//   $('#click').click(function(){
+//       $('.container').fadeTo(1000,1);// 1 is opacity 
+//   });   
+        
+  //---------------slide method --------------      
+//        slideUp
+//        slideDown
+//        siideToggle// function is optional 
+        
+//        $("#click").click(function(){
+//            $(".container").slideToggle();
+//        })  
+//    $("#click").slideDown(1000,function(){
+//        alert("haha someone is watching ")
+//    })  
+//    
+//        $('.container').slideup(function(){
+//            alert("dont pull up ")
+//        })
+//        
+        
+ //clicks first slides up and vice versa 
+        
+//---------------------Jquery Effects------------------------        
+//fadeIn() - effect is used to make an html element appear gradually on the screen
+//fadeOut() - effect is used to make an html element disappear gradually on the screen
+//fadeToggle() -effect is used to make an html element disappear and appear gradually on the screen
+//fadeTo()--  effect is used to make an html element disappear using opacity feature .      
+        
+
+     
+ ////--------------Animate function ---------------------
+//        $('.container').animate({
+//           opacity:1.5,
+//            height:'100px',
+//            width: '100px'},2000);//you can use slow fast in 2000 place 
+            
+//        $('.container').animate({opacity:2},1000);
+//        $('.container').animate({height:"100px"},1000);
+//        $('.container').animate({width:"100px"},1000);
+//        $('.container').animate({marginTop:"200px"},2000);
+//        $('.container').animate({marginLeft:"200px"},2000);
+//        $('.container').animate({marginBottom:"200px"},2000);
+//        $('.container').animate({marginTop:"300px"},2000);
+//        $('.container').animate({marginLeft:"300px"},2000);
+//        $('.container').animate({width:"100px"},2000);
+//        $('.container').animate({letterSpacing:"10px"},2000); $('.container').animate({fontSize: "3em"},2000);
+//        $(".container").animate({backgroundPositionX: "+=600px",backgroundPositionY: "+=600px"},200)
+            
+        
+//        $('.container').stop();// stop the above animation in quick time
+        
+        
+//////--------------- ----------------------------------------HTML & form ----------------------------------------------------------
+        
+//        $('html').text()///show the text in the tag 
+//        $('html').text("hello there ")//change the text
+//        $('body').html()// display the code inside it 
+//        $('.text').val()// 
+//        $('.text').val("chnage the text for the forms")//
+//        for form use the val() otherwise use html
+//         $('.text').empty()//empty the given container//
+//         $('.text').remove()// remove the entire element
+//     $('.text').addClass("my-class");// add the class for given div 
+//        $('.container').css('background-color', 'red');
+//        $('container').css('color','aqua');
+        
+//$("#p1").css("color", "red").slideUp(2000).slideDown(2000);//we can chain all at onces.
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+       </script>
+        
+        
+        
+</html>
